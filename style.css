@@ -1,0 +1,88 @@
+.back {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: center center #22181e no-repeat;
+  background-size: cover;
+}
+
+#source-heart {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+}
+
+#button {
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  margin: -50px;
+  background: #22181e;
+  position: fixed;
+  border-radius: 50px;
+  box-sizing: border-box;
+  color: black;
+  text-align: center;
+  padding: 25px 0 0 3px;
+  font-family: monospace;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 0 20px -5px #22181e;
+  overflow: hidden;
+}
+#button img {
+  position: absolute;
+  left: -73%;
+  top: 0;
+  width: 180%;
+}
+#button svg {
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translateX(-50%) translateY(-45%);
+}
+
+.heart {
+  position: fixed;
+  width: 50px;
+  z-index: 10;
+  height: 50px;
+  transform: translateX(-50%) translateY(-50%) scale(1.5);
+  opacity: 1;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+@keyframes show-heart {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) scale(1.5) rotateZ(-15deg);
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.2) rotateZ(15deg);
+    display: none;
+  }
+}
+h1 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: rgb(230, 221, 221);
+}
